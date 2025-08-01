@@ -192,4 +192,175 @@ price-item {
 
 .price-item .front {
   background: white;
-}
+  <!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tranieer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #a2d4f4, #5c8df6);
+      color: #222;
+    }
+    header {
+      padding: 20px;
+      background-color: white;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2em;
+    }
+    .features li {
+      margin: 10px 0;
+    }
+    .button {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .form-section {
+      display: none;
+      background-color: #fff;
+      color: #000;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .form-section input,
+    .form-section textarea {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 1em;
+    }
+    .flip-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 0;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 200px;
+      height: 150px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1em;
+      background-color: #fff;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+      background-color: #e0e0e0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Tranieer</header>
+
+  <section class="section">
+    <h2>Co zawiera plan?</h2>
+    <ul class="features">
+      <li>Technika</li>
+      <li>Siła</li>
+      <li>Szybkość</li>
+      <li>Regeneracja</li>
+      <li>Skoki</li>
+      <li>Wytrzymałość</li>
+    </ul>
+
+    <button class="button" onclick="pokazFormularz()">Czy jesteś zainteresowany/a zakupem?</button>
+  </section>
+
+  <section class="form-section" id="formularz">
+    <h3>Formularz zgłoszeniowy</h3>
+    <input type="text" placeholder="Imię" />
+    <input type="email" placeholder="E-mail" />
+    <input type="text" placeholder="Wzrost (cm)" />
+    <input type="text" placeholder="Waga (kg)" />
+    <textarea placeholder="Na czym będziesz się głównie skupić?"></textarea>
+    <p>Każdy kolejny trening to okazja, żeby rozwinąć inne umiejętności ⚽💥</p>
+    <p style="margin-top: 20px; font-weight: bold;">Przelew na telefon BLIK: 519-525-505</p>
+  </section>
+
+  <section class="section">
+    <h2>Ile kosztuje pakiet?</h2>
+    <div class="flip-cards">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">2-tygodniowy plan</div>
+          <div class="flip-card-back">Cena: 19,99 zł</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">4-tygodniowy plan</div>
+          <div class="flip-card-back">Cena: 29,99 zł</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Bogacz 1 miesiąc</div>
+          <div class="flip-card-back">Cena: 49,99 zł</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Tranieer | Twój rozwój zaczyna się tutaj</footer>
+
+  <script>
+    function pokazFormularz() {
+      document.getElementById("formularz").style.display = "block";
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  </script>
+</body>
+</html>
