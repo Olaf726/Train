@@ -857,3 +857,92 @@ body {
   background-repeat: no-repeat;
   color: white;
 }
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traineer</title> <!-- ✅ Tytuł w przeglądarce -->
+
+  <style>
+    /* CIEMNONIEBIESKIE TŁO Z EFEKTEM MYSZY */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #001f3f, #000c1a);
+      color: white;
+      transition: background 0.2s ease;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(0, 0, 0, 0.3), transparent 60%);
+      z-index: -1;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-top: 40px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+
+    .pakiety {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .pakiet {
+      background-color: white;
+      color: black; /* ✅ tekst w pakietach czarny */
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Zmieniony nagłówek -->
+  <h1>Traineer</h1>
+
+  <!-- ✅ Zmieniony podtytuł -->
+  <p class="subtitle">Kilku tygodniowe treningi dla młodych piłkarzy 10–16 lat.</p>
+
+  <!-- ✅ Sekcja pakietów z czarnym tekstem -->
+  <div class="pakiety">
+    <div class="pakiet">
+      <h2>Pakiet 1</h2>
+      <p>Opis pakietu numer 1</p>
+    </div>
+    <div class="pakiet">
+      <h2>Pakiet 2</h2>
+      <p>Opis pakietu numer 2</p>
+    </div>
+    <div class="pakiet">
+      <h2>Pakiet 3</h2>
+      <p>Opis pakietu numer 3</p>
+    </div>
+  </div>
+
+  <!-- ✅ Efekt myszki -->
+  <script>
+    document.addEventListener("mousemove", e => {
+      document.body.style.setProperty('--x', e.clientX + "px");
+      document.body.style.setProperty('--y', e.clientY + "px");
+    });
+  </script>
+</body>
+</html>
