@@ -1230,3 +1230,112 @@ body {
 
 </body>
 </html>
+<nav>
+  <ul>
+    <li><a href="#">Start</a></li>
+    <li><a href="#">Treningi</a></li>
+    <li><a href="#">Zakładka 3</a></li>
+    <li><a href="#">Zakładka 4</a></li> <!-- ← TO USUWAMY -->
+  </ul>
+</nav>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traineer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url("e9003aed-9255-44eb-8234-c1731345b422.png") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav li:nth-child(3) {
+      display: none; /* Usunięta 3 zakładka */
+    }
+
+    .ball {
+      width: 140px;
+      height: 140px;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      opacity: 0.8;
+    }
+
+    .ball.left {
+      left: 10px;
+    }
+
+    .ball.right {
+      right: 10px;
+    }
+
+    /* Efekt przybliżania */
+    .zoom {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .zoom:hover {
+      transform: scale(1.1);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Piłki po bokach (zamień "ball.png" na swój obrazek jeśli chcesz) -->
+  <img src="ball.png" alt="Piłka" class="ball left" />
+  <img src="ball.png" alt="Piłka" class="ball right" />
+
+  <!-- Nagłówek -->
+  <header>Traineer</header>
+
+  <!-- Nawigacja -->
+  <nav>
+    <ul>
+      <li><a href="#">Start</a></li>
+      <li><a href="#">Treningi</a></li>
+      <!-- Zakładka 3 usunięta -->
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Główna treść -->
+  <main>
+    <h2 class="zoom">Sekcja główna</h2>
+    <p class="zoom">To jest przykładowy opis. Możesz go zamienić na treść dotyczącą Twoich planów treningowych.</p>
+    <img class="zoom" src="twoje-zdjecie.jpg" alt="Plan treningowy" width="300" />
+  </main>
+
+</body>
+</html>
