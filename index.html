@@ -1347,3 +1347,102 @@ Każda dodatkowa rzecz poza tą pierwszą to +3,99 zł — wybierz mądrze 💪
 </label>
 <textarea id="message" name="message" placeholder="Np. masa mięśniowa, redukcja, mobilność..."></textarea>
 <title>Traineer</title>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traineer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #0033cc; /* NIEBIESKIE TŁO */
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav li:nth-child(3),
+    nav li:nth-child(4) {
+      display: none; /* USUWANIE 3 i 4 zakładki */
+    }
+
+    .ball {
+      width: 180px;  /* WIĘKSZE PIŁKI */
+      height: 180px;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      opacity: 0.2;
+    }
+
+    .ball.left {
+      left: 0;
+    }
+
+    .ball.right {
+      right: 0;
+    }
+
+    .zoom {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .zoom:hover {
+      transform: scale(1.1);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WIĘKSZE PIŁKI PO BOKACH -->
+  <img src="ball.png" alt="Piłka" class="ball left" />
+  <img src="ball.png" alt="Piłka" class="ball right" />
+
+  <!-- NAGŁÓWEK -->
+  <header>Traineer</header>
+
+  <!-- MENU -->
+  <nav>
+    <ul>
+      <li><a href="#">Start</a></li>
+      <li><a href="#">Treningi</a></li>
+      <!-- 3 i 4 zakładka ukryte -->
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- GŁÓWNA TREŚĆ -->
+  <main>
+    <h2 class="zoom">Witamy w Traineer</h2>
+    <p class="zoom">Profesjonalne plany treningowe dla każdego.</p>
+  </main>
+
+</body>
+</html>
