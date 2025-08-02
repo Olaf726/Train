@@ -946,3 +946,186 @@ body {
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traineer</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #001f3f, #000c1a);
+      color: white;
+      transition: background 0.2s ease;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(0, 0, 0, 0.3), transparent 60%);
+      z-index: -1;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-top: 40px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+
+    .pakiety {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .pakiet {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Zmieniony tytuł -->
+  <h1>Traineer</h1>
+
+  <!-- ✅ Zmieniony opis -->
+  <p class="subtitle">Kilku tygodniowe treningi dla młodych piłkarzy 10–16 lat.</p>
+
+  <!-- ✅ Sekcja pakietów, bez wzmianki o PDF i 40zł -->
+  <div class="pakiety">
+    <div class="pakiet">
+      <h2>Pakiet 1</h2>
+      <p>Opis pakietu numer 1</p>
+    </div>
+    <div class="pakiet">
+      <h2>Pakiet 2</h2>
+      <p>Opis pakietu numer 2</p>
+    </div>
+    <div class="pakiet">
+      <h2>Pakiet 3</h2>
+      <p>Opis pakietu numer 3</p>
+    </div>
+  </div>
+
+  <!-- ✅ Efekt podążającej myszy -->
+  <script>
+    document.addEventListener("mousemove", e => {
+      document.body.style.setProperty('--x', e.clientX + "px");
+      document.body.style.setProperty('--y', e.clientY + "px");
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traineer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #87bfff, #a3c9f9);
+      color: #111;
+    }
+
+    header {
+      padding: 30px;
+      text-align: center;
+      background-color: #ffffffd5;
+      font-size: 3rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 10px 0 40px 0;
+      color: #222;
+    }
+
+    .decorative-balls {
+      position: absolute;
+      top: 10px;
+      font-size: 3rem;
+    }
+
+    .ball-left {
+      left: 20px;
+    }
+
+    .ball-right {
+      right: 20px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    ul.features {
+      list-style: none;
+      padding: 0;
+      font-size: 1.3em;
+    }
+
+    ul.features li {
+      margin: 15px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background-color: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="decorative-balls ball-left">⚽</div>
+    Traineer
+    <div class="decorative-balls ball-right">⚽</div>
+  </header>
+
+  <p class="subtitle">Jednorazowy kilku tygodniowy plan treningowy dla młodych piłkarzy 10–16 lat.</p>
+
+  <section class="section">
+    <h2>Co zawiera plan?</h2>
+    <ul class="features">
+      <li>⚽ Technika</li>
+      <li>💪 Siła</li>
+      <li>⚡ Szybkość</li>
+      <li>🦘 Skoki</li>
+      <li>🏃‍♂️ Wytrzymałość</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Traineer. Wszelkie prawa zastrzeżone.
+  </footer>
+
+</body>
+</html>
