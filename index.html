@@ -239,3 +239,159 @@
   </script>
 </body>
 </html>
+<!-- ===== Sekcja: Co zawiera plan ===== -->
+<style>
+  .plan-wrap {
+    --radius: 16px;
+    --pad: 24px;
+    --gap: 28px;
+    --bg1: #0f172a;  /* ciemny granat */
+    --bg2: #1e3a8a;  /* niebieski */
+    --shadow: 0 10px 30px rgba(0,0,0,.25);
+
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: var(--gap);
+    align-items: center;
+    background: radial-gradient(120% 140% at 0% 0%, var(--bg2), var(--bg1));
+    padding: clamp(18px, 3vw, var(--pad));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+  }
+
+  .plan-wrap::after{
+    content:"";
+    position:absolute;
+    inset:-30%;
+    background: conic-gradient(from 180deg at 50% 50%, rgba(255,255,255,.06), transparent 30%, transparent 70%, rgba(255,255,255,.06));
+    filter: blur(60px);
+    z-index:-1;
+    animation: glow 10s linear infinite;
+  }
+
+  @keyframes glow { to { transform: rotate(1turn); } }
+
+  .plan-figure {
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  .plan-figure img{
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  @keyframes float {
+    0%,100%{ transform: translateY(0) }
+    50%{ transform: translateY(-6px) }
+  }
+
+  .plan-content h2{
+    margin:0 0 12px 0;
+    font-size: clamp(20px, 2.2vw, 28px);
+    letter-spacing:.3px;
+  }
+
+  .plan-sub{
+    margin:0 0 18px 0;
+    opacity:.9;
+    font-size: clamp(14px, 1.4vw, 16px);
+  }
+
+  .plan-list{
+    list-style:none; margin:0; padding:0;
+    display:grid; gap:12px;
+  }
+
+  .plan-item{
+    display:flex; align-items:center; gap:10px;
+    background: rgba(255,255,255,.06);
+    padding: 10px 12px;
+    border-radius: 10px;
+    transform: translateX(14px);
+    opacity: 0;
+    animation: slideIn .6s forwards;
+    backdrop-filter: blur(2px);
+  }
+
+  .plan-item:nth-child(1){ animation-delay:.15s }
+  .plan-item:nth-child(2){ animation-delay:.30s }
+  .plan-item:nth-child(3){ animation-delay:.45s }
+  .plan-item:nth-child(4){ animation-delay:.60s }
+  .plan-item:nth-child(5){ animation-delay:.75s }
+  .plan-item:nth-child(6){ animation-delay:.90s }
+
+  @keyframes slideIn {
+    to { transform: translateX(0); opacity:1 }
+  }
+
+  .plan-icon{
+    font-size: 20px; line-height:1;
+    display:grid; place-items:center;
+    width:28px; height:28px;
+    border-radius:8px;
+    background: rgba(255,255,255,.12);
+  }
+
+  .plan-text{
+    font-size: clamp(15px, 1.6vw, 18px);
+  }
+
+  /* Responsywność */
+  @media (max-width: 800px){
+    .plan-wrap{
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+    .plan-figure{ order:-1; justify-content:flex-start }
+    .plan-figure img{ max-width: 200px }
+  }
+</style>
+
+<section class="plan-wrap" id="co-zawiera-plan">
+  <!-- Ludzik po LEWEJ -->
+  <figure class="plan-figure">
+    <img src="pilkarz_bez_tla.png" alt="Piłkarz – maskotka planu">
+  </figure>
+
+  <!-- Tekst + lista po PRAWEJ -->
+  <div class="plan-content">
+    <h2>Co zawiera plan?</h2>
+    <p class="plan-sub">Kompletny rozwój pod młodego ballera – zero ściemy, sam konkret.</p>
+
+    <ul class="plan-list">
+      <li class="plan-item">
+        <span class="plan-icon">💪</span>
+        <span class="plan-text"><strong>Siła</strong> – stabilizacja, core, progres żelastwa</span>
+      </li>
+      <li class="plan-item">
+        <span class="plan-icon">⚽</span>
+        <span class="plan-text"><strong>Technika piłkarska</strong> – touch, zwody, kontrola pierwsza klasa</span>
+      </li>
+      <li class="plan-item">
+        <span class="plan-icon">🏃‍♂️</span>
+        <span class="plan-text"><strong>Wytrzymałość</strong> – interwały meczowe, tlen i próg</span>
+      </li>
+      <li class="plan-item">
+        <span class="plan-icon">⚡</span>
+        <span class="plan-text"><strong>Szybkość</strong> – start, przyspieszenie, krok meczu</span>
+      </li>
+      <li class="plan-item">
+        <span class="plan-icon">📈</span>
+        <span class="plan-text"><strong>Ogólny rozwój</strong> – mobilność, koordynacja, prewencja</span>
+      </li>
+      <li class="plan-item">
+        <span class="plan-icon">🩺</span>
+        <span class="plan-text"><strong>Powrót po kontuzji</strong> – bezpieczne wejście, stopniowanie obciążeń</span>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- ===== /Sekcja ===== -->
