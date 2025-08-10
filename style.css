@@ -23,13 +23,20 @@ ul {
 }
 
 a {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #007acc;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #39ff14; /* neonowy zielony */
+  color: #007acc; /* niebieski jak tło */
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14;
 }
 
 footer {
