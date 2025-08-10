@@ -583,5 +583,168 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Traineer - Plany treningowe</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    background: #222;
+    display: flex;
+    gap: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+  nav button {
+    background: none;
+    border: none;
+    color: #eee;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  nav button:hover, nav button.active {
+    background: #39ff14;
+    color: #111;
+  }
+  main {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto 40px;
+  }
+  h1 {
+    color: #39ff14;
+    margin-bottom: 20px;
+  }
+  .hidden {
+    display: none;
+  }
+  ol {
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+  ol li {
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <button id="homeBtn" class="active">Strona główna 🏠</button>
+  <button id="detailsBtn">Szczegóły regulaminu</button>
+</nav>
+
+<main>
+  <!-- Strona główna -->
+  <section id="homeSection">
+    <h1>Cennik planów treningowych</h1>
+    <p>Tu zakupisz bardzo dobre plany treningowe</p>
+
+    <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+      <div style="background:#222; border-radius:12px; padding:25px 20px; flex:1 1 250px; box-shadow: 0 0 15px rgba(57,255,20,0.5); color:#eee; text-align:center;">
+        <h2 style="color:#39ff14;">30 dniowy plan</h2>
+        <div style="font-size:28px; font-weight:bold; margin:10px 0 5px; color:#39ff14;">69,99 zł</div>
+        <p style="font-size:16px; color:#ccc; margin-top:5px;">Plan dla prawdziwego piłkarza</p>
+        <div style="position:absolute; top:15px; right:15px; background:#39ff14; color:#111; font-weight:bold; padding:6px 12px; border-radius:50%; font-size:14px; line-height:1; width:90px; height:90px; display:flex; align-items:center; justify-content:center; text-align:center; box-shadow:0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #0f0;">Najczęściej<br>wybierany</div>
+      </div>
+
+      <div style="background:#222; border-radius:12px; padding:25px 20px; flex:1 1 250px; box-shadow: 0 0 15px rgba(57,255,20,0.5); color:#eee; text-align:center;">
+        <h2 style="color:#39ff14;">Bogacz</h2>
+        <p style="margin-top:15px; font-size:16px; line-height:1.4; color:#eee;">
+          Pełny plan + modyfikacje:<br> Długi plan + lepsze ćwiczenia
+        </p>
+      </div>
+
+      <div style="background:#222; border-radius:12px; padding:25px 20px; flex:1 1 250px; box-shadow: 0 0 15px rgba(57,255,20,0.5); color:#eee; text-align:center;">
+        <h2 style="color:#39ff14;">Długi plan</h2>
+        <p style="margin-top:15px; font-size:16px; line-height:1.4; color:#eee;">
+          Pełny plan + modyfikacje:<br> Długi plan + lepsze ćwiczenia
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Szczegóły regulaminu -->
+  <section id="detailsSection" class="hidden">
+    <h1>Szczegóły planu Traineer</h1>
+    <ol>
+      <li>
+        <strong>Postanowienia ogólne</strong>
+        <ol type="1">
+          <li>Regulamin określa zasady korzystania z planu treningowego dostarczanego przez [Twoje imię i nazwisko].</li>
+          <li>Plan treningowy przeznaczony jest wyłącznie dla osoby, która dokonała zakupu.</li>
+          <li>Korzystanie z planu oznacza akceptację niniejszego regulaminu.</li>
+        </ol>
+      </li>
+      <li>
+        <strong>Charakter planu treningowego</strong>
+        <ol type="1">
+          <li>Plan ma charakter ogólny i edukacyjny – nie stanowi porady medycznej ani diagnozy.</li>
+          <li>Ćwiczenia w planie powinny być wykonywane zgodnie z własnymi możliwościami i stanem zdrowia.</li>
+        </ol>
+      </li>
+      <li>
+        <strong>Odpowiedzialność</strong>
+        <ol type="1">
+          <li>Autor planu nie ponosi odpowiedzialności za ewentualne urazy powstałe w wyniku nieprawidłowego wykonywania ćwiczeń.</li>
+          <li>Użytkownik ponosi pełną odpowiedzialność za swoje bezpieczeństwo podczas wykonywania ćwiczeń.</li>
+          <li>W przypadku odczuwania bólu lub złego samopoczucia należy natychmiast przerwać ćwiczenia.</li>
+        </ol>
+      </li>
+      <li>
+        <strong>Zasady korzystania</strong>
+        <ol type="1">
+          <li>Plan nie może być kopiowany, udostępniany ani sprzedawany osobom trzecim.</li>
+          <li>Plan jest przeznaczony wyłącznie do użytku prywatnego.</li>
+          <li>Niedozwolone jest wykorzystywanie planu w celach komercyjnych bez zgody autora.</li>
+        </ol>
+      </li>
+      <li>
+        <strong>Prawa autorskie</strong>
+        <ol type="1">
+          <li>Plan treningowy oraz jego treść stanowią własność [Twoje imię i nazwisko].</li>
+          <li>Wszelkie prawa autorskie są zastrzeżone.</li>
+          <li>Kopiowanie, rozpowszechnianie lub modyfikowanie planu bez zgody autora jest zabronione.</li>
+        </ol>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<script>
+  const homeBtn = document.getElementById('homeBtn');
+  const detailsBtn = document.getElementById('detailsBtn');
+  const homeSection = document.getElementById('homeSection');
+  const detailsSection = document.getElementById('detailsSection');
+
+  homeBtn.addEventListener('click', () => {
+    homeSection.classList.remove('hidden');
+    detailsSection.classList.add('hidden');
+    homeBtn.classList.add('active');
+    detailsBtn.classList.remove('active');
+  });
+
+  detailsBtn.addEventListener('click', () => {
+    detailsSection.classList.remove('hidden');
+    homeSection.classList.add('hidden');
+    detailsBtn.classList.add('active');
+    homeBtn.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
 
 
