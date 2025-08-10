@@ -87,3 +87,8 @@ a.btn:hover {
 body {
   background: linear-gradient(135deg, #0d1b3d, #123d6b);
 }
+/* ukryj cennik i pasek z info */
+#pricing,
+.promo-bar {
+  display: none !important;
+}
