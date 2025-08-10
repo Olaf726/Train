@@ -112,3 +112,6 @@ display: inline-block;
   font-weight: 700 !important;
   box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14 !important;
   transition: transform .15s ease, box-shadow .15s ease !important;
+#pricing {
+  display: none !important;
+}
