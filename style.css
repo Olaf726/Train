@@ -97,3 +97,8 @@ body {
 .promo-bar {
   display: none !important;
 }
+/* ukryj cennik i pasek z info */
+#pricing,
+.promo-bar {
+  display: none !important;
+}
