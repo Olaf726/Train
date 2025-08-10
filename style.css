@@ -84,3 +84,6 @@ a.btn:hover {
 .promo-bar {
   display: none !important;
 }
+body {
+  background: linear-gradient(135deg, #0d1b3d, #123d6b);
+}
