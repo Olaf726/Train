@@ -62,3 +62,20 @@ footer {
   transform: translateY(-1px);
   box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14;
 }
+a.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #39ff14 !important;       /* neonowy zielony */
+  color: #007acc !important;            /* niebieski jak tło */
+  border: 2px solid #39ff14 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14 !important;
+  transition: transform .15s ease, box-shadow .15s ease !important;
+}
+
+a.btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14 !important;
+}
