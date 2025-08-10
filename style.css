@@ -79,3 +79,8 @@ a.btn:hover {
   transform: translateY(-1px) !important;
   box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14 !important;
 }
+/* ukryj cennik i pasek z info */
+#pricing,
+.promo-bar {
+  display: none !important;
+}
