@@ -409,12 +409,29 @@
     background-color: #111;
     color: #eee;
   }
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Neonowy Napis</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+    padding: 20px;
+  }
 
   .neon-text {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 20px;
     font-weight: bold;
     color: #39ff14; /* neonowa zieleń */
@@ -427,13 +444,18 @@
     background-color: rgba(0,0,0,0.7);
     padding: 10px 20px;
     border-radius: 8px;
-    z-index: 1000;
+    text-align: center;
+    margin-top: auto; /* push to bottom */
   }
 </style>
 </head>
 <body>
 
-<!-- Twoja zawartość strony -->
+<main>
+  <!-- Tu jest Twoja zawartość strony -->
+  <h1>Witaj na stronie treningowej</h1>
+  <p>Tu możesz wstawiać swoje treści.</p>
+</main>
 
 <div class="neon-text">
   Pierwszy element treningu masz w cenie, a każdy kolejny dodasz już za jedyne 3,99 zł – stwórz plan idealny dla siebie!
@@ -441,3 +463,4 @@
 
 </body>
 </html>
+
