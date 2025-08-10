@@ -463,4 +463,125 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cennik planów treningowych</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    padding: 20px;
+    margin: 0;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 10px;
+  }
+  p.description {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .plan {
+    background: #222;
+    border-radius: 12px;
+    padding: 25px 20px;
+    flex: 1 1 250px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(57,255,20,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #39ff14;
+  }
+  .price {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #39ff14;
+  }
+  .tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #39ff14;
+    color: #111;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 1;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow:
+      0 0 10px #39ff14,
+      0 0 20px #39ff14,
+      0 0 30px #0f0;
+  }
+  .plan p.subtitle {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #ccc;
+  }
+  .plan p.details {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #eee;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Cennik planów treningowych</h1>
+  <p class="description">Tu zakupisz bardzo dobre plany treningowe</p>
+
+  <div class="pricing-table">
+
+    <div class="plan">
+      <h2>30 dniowy plan</h2>
+      <div class="price">69,99 zł</div>
+      <p class="subtitle">Plan dla prawdziwego piłkarza</p>
+      <div class="tag">Najczęściej<br>wybierany</div>
+    </div>
+
+    <div class="plan">
+      <h2>Bogacz</h2>
+      <p class="details">Pełny plan + modyfikacje:<br> Długi plan + lepsze ćwiczenia</p>
+    </div>
+
+    <div class="plan">
+      <h2>Długi plan</h2>
+      <p class="details">Pełny plan + modyfikacje:<br> Długi plan + lepsze ćwiczenia</p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
+
 
